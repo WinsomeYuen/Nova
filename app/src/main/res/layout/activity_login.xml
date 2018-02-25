@@ -86,8 +86,7 @@
                 android:background="@color/colorAccent"
                 android:layout_gravity="center_horizontal"
                 android:text="sign in"
-                android:textStyle="bold"
-                android:onClick="sendMessage"/>
+                android:textStyle="bold"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
