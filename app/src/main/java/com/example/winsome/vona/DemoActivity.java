@@ -90,6 +90,18 @@ public class DemoActivity extends AppCompatActivity{
                         }
                     }
                 });
+        Button click = (Button) findViewById(R.id.demoButton);
+        click.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                new phpRunner().execute("https://d5773c3c.ngrok.io/SampleInvoiceCreateAPICall.php");
+
+                new phpRunner().execute("https://d5773c3c.ngrok.io/vona/launcher.php");
+                startActivity(new Intent(v.getContext(), NotificationHistoryActivity.class));
+                finish();
+            }
+        });
+
+
 
         final ArrayList<Notification> covers = new ArrayList<Notification>();
         covers.add(new Notification("Calvin likes dick", "That's why his body hurts all the time That's why his body hurts all the time","23/01/2018"));
