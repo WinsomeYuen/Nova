@@ -79,6 +79,10 @@ public class MakeActivity extends AppCompatActivity{
                                 myIntent = new Intent(MakeActivity.this, MakeActivity.class);
                                 startActivity(myIntent);
                                 return true;
+                            case R.id.settings:
+                                myIntent = new Intent(MakeActivity.this, Settings.class);
+                                startActivity(myIntent);
+                                return true;
                             default:
                                 return true;
                         }

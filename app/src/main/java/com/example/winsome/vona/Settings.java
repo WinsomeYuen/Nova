@@ -10,16 +10,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.support.v7.widget.Toolbar;
 import java.util.ArrayList;
 
-public class NotificationHistoryActivity extends AppCompatActivity{
+public class Settings extends AppCompatActivity{
     private DrawerLayout mDrawerLayout;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.notification_list);
+        setContentView(R.layout.settings);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -67,19 +68,19 @@ public class NotificationHistoryActivity extends AppCompatActivity{
                         // Handle item selection
                         switch (menuItem.getItemId()) {
                             case R.id.login:
-                                myIntent = new Intent(NotificationHistoryActivity.this, LoginActivity.class);
+                                myIntent = new Intent(Settings.this, LoginActivity.class);
                                 startActivity(myIntent);
                                 return true;
                             case R.id.notify:
-                                myIntent = new Intent(NotificationHistoryActivity.this, NotificationHistoryActivity.class);
+                                myIntent = new Intent(Settings.this, NotificationHistoryActivity.class);
                                 startActivity(myIntent);
                                 return true;
                             case R.id.makenotify:
-                                myIntent = new Intent(NotificationHistoryActivity.this, MakeActivity.class);
+                                myIntent = new Intent(Settings.this, MakeActivity.class);
                                 startActivity(myIntent);
                                 return true;
                             case R.id.settings:
-                                myIntent = new Intent(NotificationHistoryActivity.this, Settings.class);
+                                myIntent = new Intent(Settings.this, Settings.class);
                                 startActivity(myIntent);
                                 return true;
                             default:
@@ -89,22 +90,12 @@ public class NotificationHistoryActivity extends AppCompatActivity{
                 });
 
         final ArrayList<Notification> covers = new ArrayList<Notification>();
-        covers.add(new Notification("Low in stock", "You need to update the stock amount for X item on shelf F of storage section B","21/02/2018"));
-        covers.add(new Notification("Discount on product", "Need to ensure that all prices are changed for X product across the store","08/02/2018"));
-        covers.add(new Notification("Missing Stock", "Check stock count as the current stock calculated is less than there should be","23/01/2018"));
-        covers.add(new Notification("Low in stock", "You need to update the stock amount for X item on shelf F of storage section B","21/02/2018"));
-        covers.add(new Notification("Discount on product", "Need to ensure that all prices are changed for X product across the store","08/02/2018"));
-        covers.add(new Notification("Missing Stock", "Check stock count as the current stock calculated is less than there should be","23/01/2018"));
-        covers.add(new Notification("Low in stock", "You need to update the stock amount for X item on shelf F of storage section B","21/02/2018"));
-        covers.add(new Notification("Discount on product", "Need to ensure that all prices are changed for X product across the store","08/02/2018"));
-        covers.add(new Notification("Missing Stock", "Check stock count as the current stock calculated is less than there should be","23/01/2018"));
-        NotificationAdapter adapter = new NotificationAdapter(this, covers);
-        ListView listView = (ListView) findViewById(R.id.notification_list_view);
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                Notification cover = covers.get(position);
+        covers.add(new Notification("Calvin likes dick", "That's why his body hurts all the time That's why his body hurts all the time","23/01/2018"));
+
+        final Button button = findViewById(R.id.button_id);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Code here executes on main thread after user presses button
             }
         });
     }
@@ -119,3 +110,4 @@ public class NotificationHistoryActivity extends AppCompatActivity{
         return super.onOptionsItemSelected(item);
     }
 }
+
