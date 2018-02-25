@@ -9,5 +9,7 @@
             android:title="Make Notification" />
         <item android:id="@+id/settings"
             android:title="Settings" />
+        <item android:id="@+id/demo"
+            android:title="Demo" />
     </group>
 </menu>
