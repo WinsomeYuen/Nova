@@ -63,5 +63,6 @@
                 android:value=".LoginActivity"/>
         </activity>
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

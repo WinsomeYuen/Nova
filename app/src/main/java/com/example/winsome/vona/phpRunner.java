@@ -9,28 +9,28 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class phpRunner extends AsyncTask<String, String, String>{
+public class phpRunner extends AsyncTask<String, String, String> {
 
     @Override
-    protected String doInBackground(String[] params){
+    protected String doInBackground(String... params) {
         HttpURLConnection conn = null;
-        try{
+
+        try {
             URL url;
             url = new URL(params[0]);
             conn = (HttpURLConnection) url.openConnection();
             if (conn.getResponseCode() == HttpURLConnection.HTTP_OK) {
                 InputStream is = conn.getInputStream();
-            } else{
+            } else {
                 InputStream err = conn.getErrorStream();
             }
-            return "done";
-        }
-        catch(MalformedURLException e){
+            return "Done";
+        } catch (MalformedURLException e) {
             e.printStackTrace();
-        } catch(IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            if (conn!=null){
+            if (conn != null) {
                 conn.disconnect();
             }
         }

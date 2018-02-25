@@ -19,7 +19,15 @@ public class DemoActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.demo);
-
+        Button click = (Button) findViewById(R.id.demoButton);
+        click.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                String link = "https://d5773c3c.ngrok.io/SampleInvoiceCreateAPICall.php";
+                new phpRunner().execute(link);
+                new phpRunner().execute("https://d5773c3c.ngrok.io/vona/launcher.php");
+                finish();
+            }
+        });
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionbar = getSupportActionBar();
@@ -90,16 +98,7 @@ public class DemoActivity extends AppCompatActivity{
                         }
                     }
                 });
-        Button click = (Button) findViewById(R.id.demoButton);
-        click.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                new phpRunner().execute("https://d5773c3c.ngrok.io/SampleInvoiceCreateAPICall.php");
 
-                new phpRunner().execute("https://d5773c3c.ngrok.io/vona/launcher.php");
-                startActivity(new Intent(v.getContext(), NotificationHistoryActivity.class));
-                finish();
-            }
-        });
 
 
 
