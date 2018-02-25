@@ -82,6 +82,10 @@ public class NotificationHistoryActivity extends AppCompatActivity{
                                 myIntent = new Intent(NotificationHistoryActivity.this, Settings.class);
                                 startActivity(myIntent);
                                 return true;
+                            case R.id.demo:
+                                myIntent = new Intent(NotificationHistoryActivity.this, DemoActivity.class);
+                                startActivity(myIntent);
+                                return true;
                             default:
                                 return true;
                         }

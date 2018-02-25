@@ -13,12 +13,12 @@ import android.widget.Button;
 import android.support.v7.widget.Toolbar;
 import java.util.ArrayList;
 
-public class Settings extends AppCompatActivity{
+public class DemoActivity extends AppCompatActivity{
     private DrawerLayout mDrawerLayout;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.settings);
+        setContentView(R.layout.demo);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -66,23 +66,23 @@ public class Settings extends AppCompatActivity{
                         // Handle item selection
                         switch (menuItem.getItemId()) {
                             case R.id.login:
-                                myIntent = new Intent(Settings.this, LoginActivity.class);
+                                myIntent = new Intent(DemoActivity.this, LoginActivity.class);
                                 startActivity(myIntent);
                                 return true;
                             case R.id.notify:
-                                myIntent = new Intent(Settings.this, NotificationHistoryActivity.class);
+                                myIntent = new Intent(DemoActivity.this, NotificationHistoryActivity.class);
                                 startActivity(myIntent);
                                 return true;
                             case R.id.makenotify:
-                                myIntent = new Intent(Settings.this, MakeActivity.class);
+                                myIntent = new Intent(DemoActivity.this, MakeActivity.class);
                                 startActivity(myIntent);
                                 return true;
                             case R.id.settings:
-                                myIntent = new Intent(Settings.this, Settings.class);
+                                myIntent = new Intent(DemoActivity.this, Settings.class);
                                 startActivity(myIntent);
                                 return true;
                             case R.id.demo:
-                                myIntent = new Intent(Settings.this, DemoActivity.class);
+                                myIntent = new Intent(DemoActivity.this, DemoActivity.class);
                                 startActivity(myIntent);
                                 return true;
                             default:
@@ -106,4 +106,3 @@ public class Settings extends AppCompatActivity{
         return super.onOptionsItemSelected(item);
     }
 }
-
