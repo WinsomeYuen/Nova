@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colourBg">#A99BE4</color>
+    <color name="titles">#7741FF</color>
+    <color name="subtitle">#D1287B</color>
 </resources>

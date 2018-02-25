@@ -11,12 +11,20 @@
     android:drawSelectorOnTop="true"
     tools:context="com.example.winsome.vona.NotificationHistoryActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/search"
+        android:gravity="center_horizontal"
+        android:textSize="20dp" />
+
     <EditText
         android:id="@+id/searchbox_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:textSize="@dimen/sizeText1" />
+        android:textSize="@dimen/sizeText1"
+        android:padding="20dp"/>
 
     <ListView
         android:id="@+id/notification_list_view"

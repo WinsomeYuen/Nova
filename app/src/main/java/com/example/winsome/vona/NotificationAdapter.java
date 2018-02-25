@@ -39,13 +39,13 @@ public class NotificationAdapter extends ArrayAdapter<Notification> {
         TextView dateTextView = (TextView) listItemView.findViewById(R.id.date_text_view);
         // Get the version name from the current AndroidFlavor object and
         // set this text on the name TextView
-        dateTextView.setText(currentNotif.getmText());
+        dateTextView.setText(currentNotif.getmDate());
 
         // Find the TextView in the list_item.xml layout with the ID version_number
         TextView textTextView = (TextView) listItemView.findViewById(R.id.text_text_view);
         // Get the version number from the current AndroidFlavor object and
         // set this text on the number TextView
-        textTextView.setText(currentNotif.getmDate());
+        textTextView.setText(currentNotif.getmText());
 
         // Return the whole list item layout (containing 2 TextViews and an ImageView)
         // so that it can be shown in the ListView
