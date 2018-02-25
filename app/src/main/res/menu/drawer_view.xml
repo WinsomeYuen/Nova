@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/login"
+            android:title="Logout" />
+        <item android:id="@+id/help"
+            android:title="Itinery Make" />
+        <item android:id="@+id/meh"
+            android:title="Home Etinery" />
+        <item android:id="@+id/bleh"
+            android:title="Make Notify" />
+    </group>
+</menu>

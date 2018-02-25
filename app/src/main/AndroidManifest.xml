@@ -24,7 +24,8 @@
         </activity>
         <activity
             android:name=".NotificationHistoryActivity"
-            android:label="Notification List"
+            android:label=""
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:parentActivityName=".LoginActivity">
             <!-- Parent activity meta-data to support 4.0 and lower -->
             <meta-data
