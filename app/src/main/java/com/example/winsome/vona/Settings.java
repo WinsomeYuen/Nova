@@ -9,9 +9,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.ListView;
 import android.support.v7.widget.Toolbar;
 import java.util.ArrayList;
 
@@ -91,13 +89,7 @@ public class Settings extends AppCompatActivity{
 
         final ArrayList<Notification> covers = new ArrayList<Notification>();
         covers.add(new Notification("Calvin likes dick", "That's why his body hurts all the time That's why his body hurts all the time","23/01/2018"));
-
-        final Button button = findViewById(R.id.button_id);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Code here executes on main thread after user presses button
-            }
-        });
+        
     }
 
     @Override
