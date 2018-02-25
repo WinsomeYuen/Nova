@@ -89,7 +89,7 @@ public class Settings extends AppCompatActivity{
 
         final ArrayList<Notification> covers = new ArrayList<Notification>();
         covers.add(new Notification("Calvin likes dick", "That's why his body hurts all the time That's why his body hurts all the time","23/01/2018"));
-        
+
     }
 
     @Override
