@@ -1,4 +1,4 @@
-# Vona
+# Nova
 
 This is the application we made for the Inutit Smallbiz hackathon 2018 with 2 other team members. I was in change of creating the template mobile application which would then be combined with the API's to be used with it.
 
